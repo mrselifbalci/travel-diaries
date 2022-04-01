@@ -10,16 +10,22 @@ async function addUser(user){
 
 function getAllUsers(){
     return db('users')
-}
+} 
 
 function findUserByUsername (username){
   return db('users').where({username:username}).first();
 }
 
+function removeUser(id){
+  return db('users')
+  .where({id:id})
+  .del()
+}
 
 
 module.exports = {
     addUser,
     getAllUsers,
-    findUserByUsername
+    findUserByUsername,
+    removeUser
 }

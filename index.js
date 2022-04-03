@@ -95,5 +95,5 @@ app.delete("/users/:id",(req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log(`Server running`)
+    console.log(`Server running on port http://localhost:${PORT}`)
 })

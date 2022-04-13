@@ -24,11 +24,7 @@ module.exports = {
     migrations:{
       tablename:'knex_migrations',
       directory:"./migrations"
-    },
-    ssl: {
-      required: true // This line will fix new error
     }
-    
   }
 
 };

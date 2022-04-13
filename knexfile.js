@@ -26,7 +26,7 @@ module.exports = {
       directory:"./migrations"
     },
     ssl: {
-      rejectUnauthorized: true // This line will fix new error
+      required: true // This line will fix new error
     }
     
   }

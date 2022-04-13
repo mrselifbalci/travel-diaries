@@ -20,15 +20,16 @@ module.exports = {
     pool:{
       min:2,
       max:10,
+      ssl: {
+        require: true, // This will help you. But you will see nwe error
+        rejectUnauthorized: false // This line will fix new error
+      }
     },
     migrations:{
       tablename:'knex_migrations',
       directory:"./migrations"
     },
-    ssl: {
-      require: true, // This will help you. But you will see nwe error
-      rejectUnauthorized: false // This line will fix new error
-    }
+    
   }
 
 };

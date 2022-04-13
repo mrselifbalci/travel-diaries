@@ -4,7 +4,8 @@ const app = express();
 const port = process.env.PORT || 8000;
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-
+const cors = require('cors');
+app.use(cors({origin:'*'}))
 
 //IMPORT ROUTERS
 

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server":"nodemon index.js"
-  }, 
-  "author": "ELIF BALCI", 
+    "server": "nodemon index.js"
+  },
+  "author": "ELIF BALCI",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,6 +16,7 @@
     "express": "^4.17.3",
     "knex": "^0.95.15",
     "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
     "sqlite3": "^5.0.2"
   }
 }

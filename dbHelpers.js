@@ -6,9 +6,9 @@ const db = require('./dbConfig');
 
 //USERS
 async function addUser(user) {
-  await db('users').insert(user)
-  return db('users').where({username:user.username})
-    
+  // await db('users').insert(user)
+  // return db('users').where({username:user.username})
+    return await db('users').insert(user,['id','username'])
 }
 
 function getAllUsers(){
@@ -53,7 +53,7 @@ function getAllDestinations (){
 async function addDestination (newDestination,user_id){
   await db("destinations")
   .where({user_id:user_id})
-  .insert(newDestination)
+  .insert(newDestination,["id"])
 }
 
 function removeDestination (id){

@@ -19,15 +19,15 @@ module.exports = {
     connection:process.env.DATABASE_URL,
     pool:{
       min:2,
-      max:10,
-      ssl: {
-        rejectUnauthorized: true // This line will fix new error
-      }
+      max:10
     },
     migrations:{
       tablename:'knex_migrations',
       directory:"./migrations"
     },
+    ssl: {
+      rejectUnauthorized: true // This line will fix new error
+    }
     
   }
 

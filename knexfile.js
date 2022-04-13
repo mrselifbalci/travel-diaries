@@ -21,8 +21,7 @@ module.exports = {
       min:2,
       max:10,
       ssl: {
-        require: true, // This will help you. But you will see nwe error
-        rejectUnauthorized: false // This line will fix new error
+        rejectUnauthorized: true // This line will fix new error
       }
     },
     migrations:{

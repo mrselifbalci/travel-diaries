@@ -29,7 +29,13 @@ router.get('/users',(req,res)=>{
     .then(user=>{
       res.status(200).json(user)
     })
-    .catch(error=>res.status(500).json(error))
+    .catch(error=>{
+      if(error.errno===19){
+        res.status(400).json({message:"Username already exists."})
+    }else{
+        res.status(500).json(error)
+    }
+    })
   
   })
   

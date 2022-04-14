@@ -67,7 +67,7 @@ router.get('/destinations',(req,res)=>{
   })
 
   
-  router.get('/users/:username',(req,res)=>{
+  router.get('/destinations/:id',(req,res)=>{
     const {id}=req.params
      Travels.findDestinationById(id)
      .then(destination=>{

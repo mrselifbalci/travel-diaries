@@ -31,7 +31,7 @@ router.get('/users',(req,res)=>{
     })
     .catch(error=>{
       if(error.errno===19){
-        res.status(400).json({message:"Username already exists."})
+        res.status(401).json({message:"Username already exists."})
     }else{
         res.status(500).json(error)
     }

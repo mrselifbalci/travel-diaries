@@ -65,6 +65,23 @@ router.get('/destinations',(req,res)=>{
     .catch(error=>{
       res.status(500).json(error)})
   })
+
+  
+  router.get('/users/:username',(req,res)=>{
+    const {id}=req.params
+     Travels.findDestinationById(id)
+     .then(destination=>{
+       if(destination){
+         res.status(200).json(destination)
+       } else{
+         res.status(404).json({message:"destination does not exist"})
+       }
+       
+     })
+     .catch(error=>{
+       res.status(500).json(error)
+     })
+   })
   
   
   //GROUP BY

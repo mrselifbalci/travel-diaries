@@ -69,6 +69,10 @@ function updateDestination (id,newDestination){
 
 }
 
+function findDestinationById(id){ 
+  return db("destinations").where({id:id}).first();
+}
+
 function groupDestinations (){
   return db("destinations").count()
   .groupBy("title")
@@ -90,6 +94,7 @@ module.exports={
     removeDestination,
     updateDestination,
     getUserDestinations,
-    groupDestinations
+    groupDestinations,
+    findDestinationById
 
 }
